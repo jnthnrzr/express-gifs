@@ -15,3 +15,6 @@ functions:
     events:
       - http: ANY /
       - http: 'ANY {proxy+}'
+
+plugins:
+  - serverless-offline
