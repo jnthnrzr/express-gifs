@@ -1,12 +1,20 @@
 {
   "name": "express-gifs",
   "version": "1.0.0",
-  "description": "",
+  "description": "Serverless express for Giphy's Trending Gifs",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jnthnrzr/express-gifs.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "express",
+    "serverless",
+    "giphy"
+  ],
+  "author": "Jonathan Rozario",
+  "license": "MIT"
 }
