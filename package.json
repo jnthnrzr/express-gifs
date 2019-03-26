@@ -16,5 +16,9 @@
     "giphy"
   ],
   "author": "Jonathan Rozario",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4",
+    "serverless-http": "^1.9.1"
+  }
 }
