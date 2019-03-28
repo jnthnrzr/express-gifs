@@ -10,6 +10,13 @@ describe('Test express app', () => {
       });
   });
 
+  test('GET / has text as Content-Type', () => {
+    return request(app)
+      .get('/')
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /text/);
+  });
+
   test('GET / should return a text greeting', () => {
     return request(app)
       .get('/')
