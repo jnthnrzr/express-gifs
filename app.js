@@ -9,4 +9,7 @@ app.get('/', function(req, res) {
   res.send('Hello World!');
 });
 
-module.exports.handler = serverless(app);
+module.exports = {
+  app: app,
+  handler: serverless(app),
+};
