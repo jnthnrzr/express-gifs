@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('./app').app;
+const app = require('../src/app');
 
 describe('Test express app', () => {
   test('GET / should emit a HTTP 200', () => {

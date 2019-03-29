@@ -2,7 +2,7 @@
   "name": "express-gifs",
   "version": "1.0.0",
   "description": "Serverless express for Giphy's Trending Gifs",
-  "main": "app.js",
+  "main": "./src/app.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jnthnrzr/express-gifs.git"
