@@ -1,11 +1,12 @@
 // app.js
-
 const express = require('express');
+
+const { getGifs, sayHello } = require('./routeHandlers');
 
 const app = express();
 
-app.get('/', function(req, res) {
-  res.send('Hello World!');
-});
+app.get('/', sayHello);
+
+app.get('/api/gifs', getGifs);
 
 module.exports = app;
