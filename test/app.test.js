@@ -10,19 +10,18 @@ describe('Test express app', () => {
       });
   });
 
-  test('GET / has text as Content-Type', () => {
+  test('GET / has `application/json` as Content-Type', () => {
     return request(app)
       .get('/')
-      .set('Accept', 'application/json')
-      .expect('Content-Type', /text/);
+      .expect('Content-Type', /application\/json/);
   });
 
-  test('GET / should return a text greeting', () => {
+  test('GET / should return a greeting as message', () => {
+    const expectedText = JSON.stringify({ message: 'Hello World!' });
     return request(app)
       .get('/')
       .then(response => {
-        expect(response.text).toBeTruthy();
-        expect(response.text).toBe('Hello World!');
+        expect(response.text).toBe(expectedText);
       });
   });
 });
