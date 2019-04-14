@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "nodemon src/server.js --watch src",
+    "build": "serverless package",
     "dev": "sls offline start",
     "test": "jest",
     "test:watch": "jest --watch",
