@@ -2,13 +2,19 @@
   "name": "express-gifs",
   "version": "1.0.0",
   "description": "Serverless express for Giphy's Trending Gifs",
-  "main": "index.js",
+  "main": "./src/app.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jnthnrzr/express-gifs.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm i --production",
+    "deploy": "serverless deploy -v",
+    "predeploy": "rm -rf node_modules && npm run build",
+    "start": "nodemon src/server.js --watch src",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
   },
   "keywords": [
     "express",
@@ -16,5 +22,16 @@
     "giphy"
   ],
   "author": "Jonathan Rozario",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "serverless-http": "^1.9.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "jest": "^24.5.0",
+    "nodemon": "^1.18.10"
+  }
 }
