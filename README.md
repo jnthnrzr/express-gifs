@@ -8,16 +8,21 @@ Anyone working with the Giphy API knows that requests have to be made with the A
 
 ### Secrets
 
-Giphy API provides the API Key for each developer. It is stored in an `.env` file to be read by the Express app. For AWS, this project uses [AWS Named Profiles](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html).
+Giphy API provides the API Key for each developer. It can saved as an enviroment variable named `API_KEY` to be read by the Express app. For AWS, this project uses [AWS Named Profiles](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-profiles.html) in the `serverless` configuration.
 
 ### Workflow
 
-1. Dev server: For manual tests and development purposes, the Express server is available in `src` directory. Simply run `npm start` from a terminal and checkout `http://localhost:8000/api/gifs` for the results.
-
-2. Build for Serverless & deployment from terminal
+1. Dev server: For manual tests and development purposes, the Express server is available in `src` directory. From a terminal, run
 
    ```bash
-   npm run build
+   npm start
+   ```
+
+   and open `http://localhost:8000/api/gifs` for the results.
+
+2. Build for Serverless & deploy from terminal
+
+   ```bash
    npm run deploy
    ```
 

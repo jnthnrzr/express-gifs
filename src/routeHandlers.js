@@ -1,8 +1,4 @@
-const dotenv = require('dotenv');
-
 const { getUrl, loadData } = require('./utils');
-
-dotenv.config();
 
 // get trending gifs from Giphy
 const getGifs = (request, response) => {
