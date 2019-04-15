@@ -9,12 +9,21 @@ provider:
   region: us-east-1
   profile: serverless-agent
 
+package:
+  individually: true
+  exclude:
+    - '**/*'
+
 functions:
   lambda:
     handler: src/lambda.handler
+    package:
+      include:
+        - node_modules/**
+        - src/app.js
+        - src/lambda.js
+        - src/routeHandlers.js
+        - src/utils.js
     events:
       - http: GET /
       - http: 'GET {proxy+}'
-
-plugins:
-  - serverless-offline
