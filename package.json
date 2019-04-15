@@ -11,6 +11,7 @@
     "start": "nodemon src/server.js --watch src",
     "build": "serverless package",
     "dev": "sls offline start",
+    "deploy": "serverless deploy -v",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage --colors"
