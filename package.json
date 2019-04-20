@@ -1,7 +1,7 @@
 {
   "name": "express-gifs",
   "version": "1.0.0",
-  "description": "Serverless express for Giphy's Trending Gifs",
+  "description": "A wrapper around Giphy API to make requests without leaking API Key",
   "main": "./src/app.js",
   "repository": {
     "type": "git",
