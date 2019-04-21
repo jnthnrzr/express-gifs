@@ -1,5 +1,7 @@
 # Express Gifs
 
+[![serverless](http://public.serverless.com/badges/v3.svg)](https://0lwpwbj7jb.execute-api.us-east-1.amazonaws.com/dev/api/gifs)
+
 A wrapper around Giphy API to make requests without leaking API Key. Made with `express` and `serverless`, tested with `jest`.
 
 ## Purpose
